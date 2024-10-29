@@ -1,0 +1,41 @@
+.current-weather-info {
+  display: flex; justify-content: center; align-items: stretch; margin: 50px 0; column-gap: 50px; padding: 0px 50px; z-index: 50;
+}
+.info {
+  display: flex; flex-direction: column; flex: 1; justify-content: space-around; background: linear-gradient(150deg, rgb(114, 114, 16), rgb(255, 166, 0)); padding: 50px 20px; color: white; border-radius: 20px; row-gap: 40px; text-align: center; max-width: 300px;
+}
+.weather-icon {
+  width: 150px;
+}
+.city-name {
+  line-height: 30px; margin: 0;
+}
+.day-name,
+.temperature {
+  margin: 0; line-height: 40px;
+}
+.city-name {
+  font-size: 18px;
+}
+.temperature {
+  font-size: 75px; margin-top: 20px;
+}
+.other-info {
+  display: grid; grid-template-columns: 1fr 1fr; flex: 1; max-width: 600px; background: linear-gradient(150deg, rgb(114, 114, 16), rgb(255, 166, 0)); padding: 19px 20px; text-align: center; border-radius: 20px; color: white;
+  place-items: center;
+}
+.each-info {
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center; row-gap: 10px;
+}
+.infos {
+  display: flex; align-items: center; column-gap: 10px;
+}
+.info-icon {
+  width: 45px;
+}
+.info-name {
+  font-size: 20px; margin: 0;
+}
+.info-value {
+  font-size: 25px;
+}

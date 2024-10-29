@@ -1,0 +1,27 @@
+.forecast-hourly {
+  background: linear-gradient(to bottom right, #a50ad0, #3518c3);
+  display: flex; flex-direction: column; padding: 15px 30px; border-radius: 10px; text-align: center; row-gap: 10px; position: relative; margin-top: 35px;
+}
+.we-icon {
+  width: 70px;
+}
+.day,
+.time,
+.temp {
+  font-size: 15px;
+}
+.wind {
+  display: flex; align-items: center; column-gap: 10px; justify-content: center;
+}
+.wind-icon {
+  width: 25px;
+}
+.day {
+  position: absolute; font-weight: 600; left: 50%; transform: translateX(-50%); top: -30px; width: 100%; font-size: large;
+}
+.temp,
+.wind,
+.precipitation,
+.time {
+  color: white;
+}

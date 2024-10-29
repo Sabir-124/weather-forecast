@@ -1,0 +1,23 @@
+.whole-measurement {
+  display: flex; justify-content: center; align-items: center;
+  position: fixed; top: 0; right: 0; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); 
+}
+.measurement-systems {
+  background: linear-gradient(to bottom right, #a50ad0, #3518c3);
+  display: flex; flex-direction: column; padding: 25px; border-radius: 15px; flex: 1; max-width: 500px;
+}
+.set {
+  margin: 0; text-align: start; color: white;
+}
+.set-measurement-system {
+  display: grid; grid-template-columns: 1fr 1fr; margin-top: 30px; column-gap: 15px; row-gap: 15px; justify-items: center;
+}
+.set-measurement-system button {
+  cursor: pointer; font-size: large; width: 80%; padding: 15px 0; border: none; border-radius: 30px; transition: box-shadow 0.5s ease, transform 0.3s;
+}
+.set-measurement-system button:hover {
+  box-shadow: inset 1px 0.5px 5px 1px #9728b6, inset 1px 0.5px 5px 1px #3d22c7;
+}
+.set-measurement-system button.active {
+  border: 2px solid; border-color: white; padding: 13px 0px; background-color: transparent; color: white; font-weight: 500;
+}

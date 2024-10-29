@@ -1,0 +1,32 @@
+{
+  "lat": "30.18414N",
+  "lon": "67.00141E",
+  "elevation": 1683,
+  "timezone": "Asia/Karachi",
+  "units": "metric",
+  "current": {
+    "icon": "overcast",
+    "icon_num": 7,
+    "summary": "Overcast",
+    "temperature": 20.5,
+    "feels_like": 18.8,
+    "wind_chill": 21.2,
+    "dew_point": 5.2,
+    "wind": {
+      "speed": 1.9,
+      "gusts": 3.8,
+      "angle": 232,
+      "dir": "SW"
+    },
+    "precipitation": {
+      "total": 0.0,
+      "type": "none"
+    },
+    "cloud_cover": 96,
+    "ozone": 271.52,
+    "pressure": 1020,
+    "uv_index": 3.36,
+    "humidity": 36,
+    "visibility": 24.13
+  }
+}
