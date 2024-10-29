@@ -10,12 +10,12 @@ function SettingOptions() {
   const [openSettings, setOpenSettings] = useState(false);
   const {isToggled, setIsToggled, isToggledMeasure, setIsToggledMeasure} = useContext(DefaultContext);
 
-  const lightMode = "/logos/light-icon.png";
-  const darkMode = "/logos/dark-icon.png";
-  const lightMeasure = '/logos/measurement-icon.png';
-  const lightDefault = '/logos/default-option-icon.png';
-  const darkMeasure = '/logos/measurement-icon-dark.png'
-  const darkDefault = "/logos/light-icon.png";
+  const lightMode = "/weather-forecast/logos/light-icon.png";
+  const darkMode = "/weather-forecast/logos/dark-icon.png";
+  const lightMeasure = '/weather-forecast/logos/measurement-icon.png';
+  const lightDefault = '/weather-forecast/logos/default-option-icon.png';
+  const darkMeasure = '/weather-forecast/logos/measurement-icon-dark.png'
+  const darkDefault = "/weather-forecast/logos/light-icon.png";
 
   const handleDefaultButton = () => {
     setOpenSettings(false);
@@ -36,18 +36,18 @@ function SettingOptions() {
     <>
       <div className="Settings">
         <div className={`slide-button`}>
-          <img onClick={toggleTheme} src={dark ? darkMode : lightMode} className='setting-icon' />
+          <img onClick={toggleTheme} src={dark ? darkMode : lightMode} className='setting-icon' alt="toggle-icon"/>
         </div>
         <div>
           <div>
-            <img className='setting-icon' src="/logos/setting-icon.png"
+            <img className='setting-icon' src="/weather-forecast/logos/setting-icon.png" alt="Setting-icon"
               onClick={() => setOpenSettings((prev) => !prev)} />
           </div>
           <div className={`setting-options ${openSettings ? 'open' : ''} ${!openSettings ? 'close' : ''}`}>
             <div className={`options ${dark ? 'dark' : ''}`} 
               onClick={handleMeasureButton}>
               <div className="icons">
-                <img className="option-icon1" src={dark ? darkMeasure : lightMeasure} />
+                <img className="option-icon1" src={dark ? darkMeasure : lightMeasure} alt="measure-icon"/>
               </div>
               <div className="option-name">
                 <span>Set measurement system</span>
@@ -57,7 +57,7 @@ function SettingOptions() {
             <div className={`options ${dark ? 'dark' : ''}`}
               onClick={handleDefaultButton}>
               <div className="icons">
-                <img className="option-icon2" src={dark ? darkDefault : lightDefault} />
+                <img className="option-icon2" src={dark ? darkDefault : lightDefault} alt="default-icon"/>
               </div>
               <div className="option-name">
                 <span>Set default city</span>

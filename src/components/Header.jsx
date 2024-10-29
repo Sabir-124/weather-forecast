@@ -28,7 +28,7 @@ const Header = () => {
       <div className="searchPlace">
         <input className="search" type="text" placeholder="Search the city" onChange={onSearch} />
         <div className="icon">
-          <img className="search-icon" src="/logos/search-icon.png" />
+          <img className="search-icon" src="/weather-forecast/logos/search-icon.png" alt='search icon'/>
         </div>
         <div className={`output-search ${text.length === 0 ? 'hide' : 'show'}`}>
           <div className="search-results">
