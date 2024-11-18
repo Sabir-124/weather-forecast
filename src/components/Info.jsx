@@ -21,7 +21,7 @@ function Info({ data }) {
         <img className="weather-icon" src={`/weather-forecast/weather_icons/set03/big/${icon_num}.png`} alt="current weather icon"/>
         <h1 className="day-name">{summary}</h1>
       </div>
-      <div>
+      <div className="curr-info">
         <p className="city-name"><b>{capitalize(place.name)}</b>, {place.country}</p>
         <h1 className="day-name">{day}</h1>
         <h1 className="temperature">{Math.round(temperature)}{units.temperature}</h1>

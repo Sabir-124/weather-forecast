@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import "../styles/header.css";
 import SetDefaultCity from "./SetDefault";
 import DefaultContext from "../context/DefaultContext";
@@ -18,6 +18,28 @@ function SettingOptions() {
   const darkMeasure = "/weather-forecast/logos/measurement-icon-dark.png";
   const darkDefault = "/weather-forecast/logos/light-icon.png";
 
+  const settingRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (
+      settingRef.current &&
+      !settingRef.current.contains(event.target)
+    ) {
+      setOpenSettings(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleSettings = () => {
+    setOpenSettings((prev) => !prev);
+  }
+
   const handleDefaultButton = () => {
     setOpenSettings(false);
     setIsToggled(false);
@@ -35,7 +57,7 @@ function SettingOptions() {
 
   return (
     <>
-      <div className="Settings">
+      <div className="Settings" ref={settingRef}>
         <div className={`slide-button`}>
           <img
             onClick={toggleTheme}
@@ -50,7 +72,7 @@ function SettingOptions() {
               className="setting-icon"
               src="/weather-forecast/logos/setting-icon.png"
               alt="Setting-icon"
-              onClick={() => setOpenSettings((prev) => !prev)}
+              onClick={handleSettings}
             />
           </div>
           <div
@@ -70,7 +92,7 @@ function SettingOptions() {
                 />
               </div>
               <div className="option-name">
-                <span>Set measurement system</span>
+                <span>Measurement system</span>
               </div>
             </div>
 

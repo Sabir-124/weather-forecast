@@ -30,3 +30,18 @@
     transform: translateY(180px);
   }
 }
+@media (max-width: 426px) {
+  .container-dark,
+  .container-light {
+    height: 200px;
+  }
+  .cloud {
+    width: 180px; height: 60px;
+  }
+  .cloud::before {
+    box-shadow: 50px 0 0 20px white; left: 30px; width: 60px; height: 60px; top: -30px;
+  }
+  .drop {
+    display: none;
+  }
+}

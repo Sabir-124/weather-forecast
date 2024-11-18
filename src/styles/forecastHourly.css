@@ -25,3 +25,28 @@
 .time {
   color: white;
 }
+@media (max-width: 512px) {
+  .forecast-hourly {
+    row-gap: 5px; padding: 10px 20px;
+  }
+  .we-icon {
+    width: 50px;
+  }
+  .day,
+  .time,
+  .temp {
+    font-size: 12px;
+  }
+  .day {
+    top: -20px;
+  }
+  .wind,
+  .precipitation {
+    font-size: 13px;
+  }
+}
+@media (max-width: 426px) {
+  .we-icon {
+    width: 35px;
+  }
+}

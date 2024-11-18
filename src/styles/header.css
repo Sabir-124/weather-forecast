@@ -15,9 +15,11 @@
 .Search {
   width: 100%; padding: 10px 20px; border-radius: 40px; transition: box-shadow 0.3s ease, transform 0.3s ease; border: navajowhite; outline: none;
 }
+.default-results.show,
 .output-search.show {
   position: absolute; top: 60px; color: black; width: 80%; text-align: start; opacity: 1; z-index: 1;
 }
+.default-results.hide,
 .output-search.hide {
   opacity: 0; pointer-events: none; width: 100%;  position: absolute; top: 60px; color: black; width: 100%; text-align: start;
 }

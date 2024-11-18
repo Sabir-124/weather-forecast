@@ -1,19 +1,18 @@
-import axios from 'axios';
+import axios from "axios";
 
 export async function getWeatherData(endpoint, place_id, measurementSystem) {
-
   const options = {
-    method: 'GET',
+    method: "GET",
     url: `https://ai-weather-by-meteosource.p.rapidapi.com/${endpoint}`,
     params: {
       place_id,
-      language: 'en',
-      units: measurementSystem
+      language: "en",
+      units: measurementSystem,
     },
     headers: {
-      'x-rapidapi-key': '970c3f8ab6msh838be89a004b60fp1d473bjsnb07feeec1d28',
-      'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com'
-    }
+      "x-rapidapi-key": "b4c7402ef6msh6509fd62eb32e97p13bebfjsn47949eda934f",
+      "x-rapidapi-host": "ai-weather-by-meteosource.p.rapidapi.com",
+    },
   };
 
   try {
@@ -25,18 +24,17 @@ export async function getWeatherData(endpoint, place_id, measurementSystem) {
 }
 
 export async function searchPlace(text) {
-
   const options = {
-    method: 'GET',
-    url: 'https://ai-weather-by-meteosource.p.rapidapi.com/find_places',
+    method: "GET",
+    url: "https://ai-weather-by-meteosource.p.rapidapi.com/find_places",
     params: {
       text,
-      language: 'en'
+      language: "en",
     },
     headers: {
-      'x-rapidapi-key': '970c3f8ab6msh838be89a004b60fp1d473bjsnb07feeec1d28',
-      'x-rapidapi-host': 'ai-weather-by-meteosource.p.rapidapi.com'
-    }
+      "x-rapidapi-key": "b4c7402ef6msh6509fd62eb32e97p13bebfjsn47949eda934f",
+      "x-rapidapi-host": "ai-weather-by-meteosource.p.rapidapi.com",
+    },
   };
 
   try {

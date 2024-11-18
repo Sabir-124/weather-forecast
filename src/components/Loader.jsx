@@ -9,16 +9,15 @@ const Loader = () => {
     <div className={`container-${dark ? 'dark' : 'light'}`}>
       <div className="cloud"></div>
       <div className="rain">
-        <span style={{"--i":11}}></span>
-        <span style={{"--i":16}}></span>
+        <span className='drop' style={{"--i":11}}></span>
+        <span className='drop' style={{"--i":16}}></span>
         <span style={{"--i":13}}></span>
         <span style={{"--i":18}}></span>
         <span style={{"--i":10}}></span>
         <span style={{"--i":19}}></span>
         <span style={{"--i":12}}></span>
-        <span style={{"--i":14}}></span>
-        <span style={{"--i":16}}></span>
-        
+        <span className='drop' style={{"--i":14}}></span>
+        <span className='drop' style={{"--i":16}}></span>
       </div>
     </div>
   )
