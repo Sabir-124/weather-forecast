@@ -18,7 +18,7 @@ function Info({ data }) {
   return (
     <div className="info">
       <div>
-        <img className="weather-icon" src={`/weather_icons/set03/big/${icon_num}.png`} alt="current weather icon"/>
+        <img className="weather-icon" src={`/weather-forecast/weather_icons/set03/big/${icon_num}.png`} alt="current weather icon"/>
         <h1 className="day-name">{summary}</h1>
       </div>
       <div>

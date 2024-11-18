@@ -9,42 +9,42 @@ const {units} = useContext(WeatherContext);
   const otherInfos = [
     {
       id: 1,
-      icon: '/logos/cloud.png',
+      icon: '/weather-forecast/logos/cloud.png',
       name: 'Cloud Cover',
       value: Math.round(cloud_cover),
       unit: units.cloud_cover
     },
     {
       id: 2,
-      icon: '/logos/feels.png',
+      icon: '/weather-forecast/logos/feels.png',
       name: 'Real feel',
       value: Math.round(feels_like),
       unit: units.temperature
     },
     {
       id: 3,
-      icon: '/logos/humidity.png',
+      icon: '/weather-forecast/logos/humidity.png',
       name: 'Humidity',
       value: Math.round(humidity),
       unit: units.humidity
     },
     {
       id: 4,
-      icon: '/logos/uv.png',
+      icon: '/weather-forecast/logos/uv.png',
       name: 'UV Index',
       value: Math.round(uv_index),
       unit: units.uv_index
     },
     {
       id: 5,
-      icon: '/logos/visibility.png',
+      icon: '/weather-forecast/logos/visibility.png',
       name: 'Visibility',
       value: Math.round(visibility),
       unit: units.visibility
     },
     {
       id: 6,
-      icon: '/logos/wind.png',
+      icon: '/weather-forecast/logos/wind.png',
       name: 'Wind speed',
       value: Math.round(wind.speed),
       unit: units.wind_speed

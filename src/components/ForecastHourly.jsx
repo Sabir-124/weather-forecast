@@ -55,12 +55,12 @@ function ForecastHourly({data}) {
       <div className="time">{weather_date.time}</div>
       <div className="icon-temp">
         <div className="weather-icons">
-          <img className="we-icon" src={`/weather_icons/set03/big/${icon}.png`} alt='weather-icon'/>
+          <img className="we-icon" src={`/weather-forecast/weather_icons/set03/big/${icon}.png`} alt='weather-icon'/>
         </div>
         <div className="temp">{Math.round(temperature)}{units.temperature}</div>
       </div>
       <div className="wind">
-        <img className="wind-icon" src="/logos/wind.png" alt='wind icon'/>
+        <img className="wind-icon" src="/weather-forecast/logos/wind.png" alt='wind icon'/>
         <div>{Math.round(wind.speed)}{units.wind_speed}</div>
       </div>
       <div className="precipitation">{Math.round(precipitation.total)} {units.precipitation}</div>
