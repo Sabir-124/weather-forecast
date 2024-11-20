@@ -23,7 +23,11 @@ const SetDefaultCity = () => {
 
     try {
       const data = await searchPlace(input);
-      setDefaultResults(data);
+      if (Array.isArray(data)) {
+        setDefaultResults(data);
+      } else {
+        setDefaultResults([]);
+      }
     } catch (error) {
       console.error("Error fetching places: ", error);
       setDefaultResults([]);

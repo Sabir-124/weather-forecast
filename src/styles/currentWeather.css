@@ -2,7 +2,7 @@
   display: flex; justify-content: center; align-items: stretch; margin: 50px 0; column-gap: 50px; padding: 0px 50px; z-index: 50;
 }
 .info {
-  display: flex; flex-direction: column; flex: 1; justify-content: space-around; background: linear-gradient(150deg, rgb(114, 114, 16), rgb(255, 166, 0)); padding: 50px 20px; color: white; border-radius: 20px; row-gap: 40px; text-align: center; max-width: 300px;
+  display: flex; flex-direction: column; flex: 1; justify-content: space-around;  padding: 50px 20px; color: white; border-radius: 20px; row-gap: 40px; text-align: center; max-width: 300px;
 }
 .weather-icon {
   width: 150px;
@@ -21,7 +21,7 @@
   font-size: 75px; margin-top: 20px;
 }
 .other-info {
-  display: grid; grid-template-columns: 1fr 1fr; flex: 1; max-width: 600px; background: linear-gradient(150deg, rgb(114, 114, 16), rgb(255, 166, 0)); padding: 19px 20px; text-align: center; border-radius: 20px; color: white;
+  display: grid; grid-template-columns: 1fr 1fr; flex: 1; max-width: 600px;  padding: 19px 20px; text-align: center; border-radius: 20px; color: white;
   place-items: center;
 }
 .each-info {
@@ -41,6 +41,69 @@
 }
 .info-value {
   font-size: 25px;
+}
+.sunny {
+  background: linear-gradient(150deg, rgb(114, 114, 16), rgb(255, 166, 0));
+}
+.light-cloudy {
+  background: linear-gradient(150deg, #B0C4DE, #E8E8E8); color: black;
+}
+.medium-cloudy {
+  background: linear-gradient(150deg, #B0C4DE, #F5F5F5); color: black;
+}
+.dark-cloudy {
+  background: linear-gradient(150deg, #4A4E69, #6C757D);
+}
+.rainy {
+  background: linear-gradient(150deg, #808080, #5D7A8B);
+}
+.heavy-rain {
+  background: linear-gradient(150deg, #4B5D67, #303A3F);
+}
+.rainy-sunny {
+  background: linear-gradient(150deg, #A9BCC6, #FFD700);
+}
+.storm-sunny {
+  background: linear-gradient(150deg, #4B4F54, #FFD700);
+}
+.snowy {
+  background: linear-gradient(150deg, #A9D0D3, #FFFFFF); color: black;
+}
+.heavy-snow {
+  background: linear-gradient(150deg, #A9A9A9, #A0C6E5);
+}
+.sunny-snowy {
+  background: linear-gradient(150deg, #E8F4FF, #FFDF33); color: black;
+}
+.rainy-snowy {
+  background: linear-gradient(150deg, #E0F7FA, #607D8B);
+}
+.rainy-snowy-sunny {
+  background: linear-gradient(150deg, #A9D6E5, #4B5D67, #FFD700);
+}
+.night {
+  background: linear-gradient(150deg, #003366, #1D1F2A);
+}
+.night-cloudy {
+  background: linear-gradient(150deg, #3A4C74, #9B8D99);
+}
+.night-dark-cloudy {
+  background: linear-gradient(150deg, #191970, #36454F);
+}
+.night-rainy {
+  background: linear-gradient(150deg, #6A4C9C, #003F4C);
+}
+.night-storm {
+  background: linear-gradient(150deg, #4A6D8C, #6A4C8C);
+}
+.night-snow {
+  background: linear-gradient(150deg, #A7C7E7, #2C3E50);
+}
+.night-snow-rainy {
+  background: linear-gradient(150deg, #A6C9D9, #6D7F84);
+}
+.default-weather {
+  background: linear-gradient(to bottom right, #a50ad0, #3518c3);
 }
 @media (max-width: 614px) {
   .info {

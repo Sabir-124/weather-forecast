@@ -15,7 +15,8 @@ const Header = () => {
   const handleClickOutside = (event) => {
     if (
       searchbarRef.current &&
-      !searchbarRef.current.contains(event.target)
+      !searchbarRef.current.contains(event.target) &&
+      !event.target.classlist.contains("result")
     ) {
       setHide(false);
     }
@@ -106,7 +107,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <SettingOptions/>
+        <SettingOptions />
       </div>
     </div>
   );

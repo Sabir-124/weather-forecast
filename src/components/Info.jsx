@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import WeatherContext from "../context/WeatherContext";
 
-function Info({ data }) {
+function Info({ data, className }) {
   const { icon_num, summary, temperature } = data;
   const {units} = useContext(WeatherContext);
 
@@ -16,7 +16,7 @@ function Info({ data }) {
   }
 
   return (
-    <div className="info">
+    <div className={`info ${className}`}>
       <div>
         <img className="weather-icon" src={`/weather-forecast/weather_icons/set03/big/${icon_num}.png`} alt="current weather icon"/>
         <h1 className="day-name">{summary}</h1>
