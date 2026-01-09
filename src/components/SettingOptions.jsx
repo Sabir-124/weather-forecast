@@ -4,6 +4,13 @@ import SetDefaultCity from "./SetDefault";
 import DefaultContext from "../context/DefaultContext";
 import ThemeContext from "../context/ThemeContext";
 import SetMeasurement from "./SetMeasurement";
+import lightMode from "../../public/logos/light-icon.png";
+import darkMode from "../../public/logos/dark-icon.png";
+import lightMeasure from "../../public/logos/measurement-icon.png";
+import lightDefault from "../../public/logos/default-option-icon.png";
+import darkMeasure from "../../public/logos/measurement-icon-dark.png";
+import darkDefault from "../../public/logos/light-icon.png";
+import SettingIcon from "../../public/logos/setting-icon.png";
 
 function SettingOptions() {
   const { dark, setDark, saveTheme } = useContext(ThemeContext);
@@ -11,20 +18,10 @@ function SettingOptions() {
   const { isToggled, setIsToggled, isToggledMeasure, setIsToggledMeasure } =
     useContext(DefaultContext);
 
-  const lightMode = "/weather-forecast/logos/light-icon.png";
-  const darkMode = "/weather-forecast/logos/dark-icon.png";
-  const lightMeasure = "/weather-forecast/logos/measurement-icon.png";
-  const lightDefault = "/weather-forecast/logos/default-option-icon.png";
-  const darkMeasure = "/weather-forecast/logos/measurement-icon-dark.png";
-  const darkDefault = "/weather-forecast/logos/light-icon.png";
-
   const settingRef = useRef(null);
 
   const handleClickOutside = (event) => {
-    if (
-      settingRef.current &&
-      !settingRef.current.contains(event.target)
-    ) {
+    if (settingRef.current && !settingRef.current.contains(event.target)) {
       setOpenSettings(false);
     }
   };
@@ -38,7 +35,7 @@ function SettingOptions() {
 
   const handleSettings = () => {
     setOpenSettings((prev) => !prev);
-  }
+  };
 
   const handleDefaultButton = () => {
     setOpenSettings(false);
@@ -70,7 +67,7 @@ function SettingOptions() {
           <div>
             <img
               className="setting-icon"
-              src="/weather-forecast/logos/setting-icon.png"
+              src={SettingIcon}
               alt="Setting-icon"
               onClick={handleSettings}
             />

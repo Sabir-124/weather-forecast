@@ -3,6 +3,7 @@ import SettingOptions from "./SettingOptions";
 import { searchPlace } from "../data-API";
 import { useContext, useEffect, useRef, useState } from "react";
 import WeatherContext from "../context/WeatherContext";
+import SearchIcon from "../../public/logos/search-icon.png";
 
 const Header = () => {
   const [text, setText] = useState("");
@@ -16,7 +17,7 @@ const Header = () => {
     if (
       searchbarRef.current &&
       !searchbarRef.current.contains(event.target) &&
-      !event.target.classlist.contains("result")
+      !event.target.classlist.includes("result")
     ) {
       setHide(false);
     }
@@ -82,11 +83,7 @@ const Header = () => {
             onChange={onSearch}
           />
           <div className="icon">
-            <img
-              className="search-icon"
-              src="/weather-forecast/logos/search-icon.png"
-              alt="search icon"
-            />
+            <img className={SearchIcon} alt="search icon" />
           </div>
           <div
             className={`output-search show-result ${

@@ -5,13 +5,14 @@ import { DEFAULT_PLACE, MEASUREMENT_SYSTEMS, UNITS } from "../constants";
 const WeatherContext = createContext();
 
 function WeatherProvider({ children }) {
-
   const [place, setPlace] = useState(DEFAULT_PLACE);
   const [loading, setLoading] = useState(true);
   const [currentWeather, setCurrentWeather] = useState({});
   const [hourlyForecast, setHourlyForecast] = useState([]);
   const [dailyForecast, setDailyForecast] = useState([]);
-  const [measurementSystem, setMeasurementSystem] = useState(MEASUREMENT_SYSTEMS.AUTO);
+  const [measurementSystem, setMeasurementSystem] = useState(
+    MEASUREMENT_SYSTEMS.METRIC
+  );
   const [units, setUnits] = useState({});
 
   useEffect(() => {
@@ -19,7 +20,7 @@ function WeatherProvider({ children }) {
       setLoading(true);
 
       const cw = await getWeatherData(
-        'current', 
+        "current",
         place.place_id,
         measurementSystem
       );
@@ -27,15 +28,15 @@ function WeatherProvider({ children }) {
       setUnits(UNITS[cw.units]);
 
       const hf = await getWeatherData(
-        'hourly', 
-        place.place_id, 
+        "hourly",
+        place.place_id,
         measurementSystem
       );
       setHourlyForecast(hf.hourly.data);
 
       const df = await getWeatherData(
-        'daily', 
-        place.place_id, 
+        "daily",
+        place.place_id,
         measurementSystem
       );
       setDailyForecast(df.daily.data);
@@ -43,13 +44,25 @@ function WeatherProvider({ children }) {
       setLoading(false);
     }
     _getWeatherData();
-  }, [place, measurementSystem])
+  }, [place, measurementSystem]);
 
   return (
-    <WeatherContext.Provider value={{ place, setPlace, loading, currentWeather, dailyForecast, hourlyForecast, measurementSystem, setMeasurementSystem, units }}>
+    <WeatherContext.Provider
+      value={{
+        place,
+        setPlace,
+        loading,
+        currentWeather,
+        dailyForecast,
+        hourlyForecast,
+        measurementSystem,
+        setMeasurementSystem,
+        units,
+      }}
+    >
       {children}
     </WeatherContext.Provider>
-  )
+  );
 }
 
 export { WeatherProvider };

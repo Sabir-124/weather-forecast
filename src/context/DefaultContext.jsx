@@ -2,18 +2,18 @@ import { createContext, useContext, useState, useEffect } from "react";
 import WeatherContext from "./WeatherContext";
 
 const DefaultContext = createContext();
-const DEFAULT_KEY = 'defaultPlace';
+const DEFAULT_KEY = "Quetta";
 
-function DefaultProvider ({children}) {
+function DefaultProvider({ children }) {
   const [isToggled, setIsToggled] = useState(true);
   const [isToggledMeasure, setIsToggledMeasure] = useState(true);
-  const [cityName, setCityName] = useState('');
-  const [countryName, setCountryName] = useState('');
-  const {setPlace} = useContext(WeatherContext);
+  const [cityName, setCityName] = useState("");
+  const [countryName, setCountryName] = useState("");
+  const { setPlace } = useContext(WeatherContext);
 
   const setDefault = (set) => {
     localStorage.setItem(DEFAULT_KEY, JSON.stringify(set));
-  }
+  };
 
   useEffect(() => {
     const savedPlace = JSON.parse(localStorage.getItem(DEFAULT_KEY));
@@ -25,11 +25,23 @@ function DefaultProvider ({children}) {
   }, []);
 
   return (
-    <DefaultContext.Provider value={{isToggled, setIsToggled, setDefault, cityName, setCityName, countryName, setCountryName, isToggledMeasure, setIsToggledMeasure}}>
+    <DefaultContext.Provider
+      value={{
+        isToggled,
+        setIsToggled,
+        setDefault,
+        cityName,
+        setCityName,
+        countryName,
+        setCountryName,
+        isToggledMeasure,
+        setIsToggledMeasure,
+      }}
+    >
       {children}
     </DefaultContext.Provider>
-  )
+  );
 }
 
-export {DefaultProvider};
+export { DefaultProvider };
 export default DefaultContext;
